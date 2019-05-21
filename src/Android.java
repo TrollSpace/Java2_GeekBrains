@@ -1,4 +1,8 @@
 public class Android {
+    String name;
+    int jumpHigh;
+    int runDistance;
+
     public void run() {
         System.out.println("Робот побежал");
     }

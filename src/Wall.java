@@ -1,3 +1,3 @@
 public class Wall {
-    int hight;
+    int high;
 }
