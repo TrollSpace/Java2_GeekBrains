@@ -25,7 +25,7 @@ public class People implements Skills {
     @Override
     public void jump(int wallHigh) {
         if (onTrack && jumpHigh >= wallHigh) {
-            System.out.println("Кошка перепрыгнула стену высотой - " + wallHigh + ".");
+            System.out.println("Человек перепрыгнул стену высотой - " + wallHigh + ".");
         } else {
             System.out.println("Человек не допрыгнул");
             onTrack = false;

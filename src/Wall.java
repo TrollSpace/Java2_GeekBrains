@@ -7,7 +7,7 @@ public class Wall extends ObstacleCourse {
 
     @Override
     public void doIt(Skills runner) {
-        runner.run(high);
+        runner.jump(high);
 
     }
 }
