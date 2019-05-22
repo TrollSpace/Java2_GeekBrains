@@ -1,11 +1,12 @@
-public class RunningTrack {
+public class RunningTrack extends ObstacleCourse {
     private int distance;
 
     public RunningTrack(int distance) {
         this.distance = distance;
     }
 
-    public void doIt(Skills runner){
+    @Override
+    public void doIt(Skills runner) {
         runner.run(distance);
 
     }
