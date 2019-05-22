@@ -2,14 +2,16 @@ public class Android implements Skills {
     String name;
     int jumpHigh;
     int runDistance;
-    boolean onTrack = true;
+    boolean onTrack;
 
     public Android(String name, int jumpHigh, int runDistance) {
         this.name = name;
         this.jumpHigh = jumpHigh;
         this.runDistance = runDistance;
+        this.onTrack = true;
     }
 
+    @Override
     public void run(int trackLength) {
         if (onTrack && runDistance >= trackLength) {
             System.out.println("Робот пробежал " + trackLength + ".");
@@ -20,6 +22,7 @@ public class Android implements Skills {
         ;
     }
 
+    @Override
     public void jump(int wallHigh) {
         if (onTrack && jumpHigh >= wallHigh) {
             System.out.println("Робот перепрыгнул стену высотой - " + wallHigh + ".");
