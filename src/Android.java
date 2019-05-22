@@ -40,7 +40,7 @@ public class Android implements Skills {
 
     @Override
     public void result() {
-        System.out.println(name + (onTrack ? ("finish") : ("fail")));
+        System.out.println(name + " " + (onTrack ? ("finish") : ("fail")));
     }
 
 }
