@@ -1,8 +1,8 @@
 public class Android implements Skills {
-    String name;
-    int jumpHigh;
-    int runDistance;
-    boolean onTrack;
+    private String name;
+    private int jumpHigh;
+    private int runDistance;
+    private boolean onTrack;
 
     public Android(String name, int jumpHigh, int runDistance) {
         this.name = name;

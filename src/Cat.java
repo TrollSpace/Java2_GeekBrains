@@ -1,8 +1,8 @@
 public class Cat implements Skills {
-    String name;
-    int jumpHigh;
-    int runDistance;
-    boolean onTrack;
+    private String name;
+    private int jumpHigh;
+    private int runDistance;
+    private boolean onTrack;
 
     public Cat(String name, int jumpHigh, int runDistance) {
         this.name = name;
