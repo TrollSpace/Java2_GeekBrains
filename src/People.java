@@ -4,6 +4,7 @@ public class People implements Skills {
     private int runDistance;
     private boolean onTrack;
 
+
     public People(String name, int jumpHigh, int runDistance) {
         this.name = name;
         this.jumpHigh = jumpHigh;
@@ -40,6 +41,11 @@ public class People implements Skills {
 
     @Override
     public void result() {
-        System.out.println(name + (onTrack ? ("finish") : ("fail")));
+        System.out.println(name + " " + (onTrack ? ("finish") : ("fail")));
+    }
+
+    @Override
+    public void presentation() {
+        System.out.println(name + " бег: " + runDistance + ", прыжки: " + jumpHigh +".");
     }
 }

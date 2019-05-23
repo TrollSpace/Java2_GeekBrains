@@ -43,4 +43,9 @@ public class Android implements Skills {
         System.out.println(name + " " + (onTrack ? ("finish") : ("fail")));
     }
 
+    @Override
+    public void presentation() {
+        System.out.println(name + " бег: " + runDistance + ", прыжки: " + jumpHigh +".");
+    }
+
 }

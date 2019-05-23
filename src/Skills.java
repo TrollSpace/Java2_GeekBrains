@@ -3,4 +3,5 @@ public interface Skills {
     void jump(int wallHigh);
     boolean onTrack();
     void result();
+    void presentation();
 }

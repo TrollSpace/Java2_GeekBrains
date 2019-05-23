@@ -40,6 +40,12 @@ public class Cat implements Skills {
 
     @Override
     public void result() {
-        System.out.println(name + (onTrack ? ("finish") : ("fail")));
+        System.out.println(name + " " + (onTrack ? ("finish") : ("fail")));
+    }
+
+
+    @Override
+    public void presentation() {
+        System.out.println(name + " бег: " + runDistance + ", прыжки: " + jumpHigh +".");
     }
 }
