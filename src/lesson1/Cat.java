@@ -1,10 +1,12 @@
-public class Android implements Skills {
+package lesson1;
+
+public class Cat implements Skills {
     private String name;
     private int jumpHigh;
     private int runDistance;
     private boolean onTrack;
 
-    public Android(String name, int jumpHigh, int runDistance) {
+    public Cat(String name, int jumpHigh, int runDistance) {
         this.name = name;
         this.jumpHigh = jumpHigh;
         this.runDistance = runDistance;
@@ -14,9 +16,9 @@ public class Android implements Skills {
     @Override
     public void run(int trackLength) {
         if (onTrack && runDistance >= trackLength) {
-            System.out.println("Робот пробежал " + trackLength + ".");
+            System.out.println("Кошка пробежала " + trackLength + ".");
         } else {
-            System.out.println("Робот сошел с дистанции");
+            System.out.println("Кошка ушла спать");
             onTrack = false;
         }
         ;
@@ -25,9 +27,9 @@ public class Android implements Skills {
     @Override
     public void jump(int wallHigh) {
         if (onTrack && jumpHigh >= wallHigh) {
-            System.out.println("Робот перепрыгнул стену высотой - " + wallHigh + ".");
+            System.out.println("Кошка перепрыгнула стену высотой - " + wallHigh + ".");
         } else {
-            System.out.println("Робот сошел с дистанции");
+            System.out.println("Кошка шмякнулась");
             onTrack = false;
         }
         ;
@@ -43,9 +45,9 @@ public class Android implements Skills {
         System.out.println(name + " " + (onTrack ? ("finish") : ("fail")));
     }
 
+
     @Override
     public void presentation() {
         System.out.println(name + " бег: " + runDistance + ", прыжки: " + jumpHigh +".");
     }
-
 }

@@ -1,3 +1,5 @@
+package lesson1;
+
 public interface Skills {
     void run(int trackLength);
     void jump(int wallHigh);

@@ -1,11 +1,12 @@
-public class People implements Skills {
+package lesson1;
+
+public class Android implements Skills {
     private String name;
     private int jumpHigh;
     private int runDistance;
     private boolean onTrack;
 
-
-    public People(String name, int jumpHigh, int runDistance) {
+    public Android(String name, int jumpHigh, int runDistance) {
         this.name = name;
         this.jumpHigh = jumpHigh;
         this.runDistance = runDistance;
@@ -15,9 +16,9 @@ public class People implements Skills {
     @Override
     public void run(int trackLength) {
         if (onTrack && runDistance >= trackLength) {
-            System.out.println("Человек пробежал " + trackLength + ".");
+            System.out.println("Робот пробежал " + trackLength + ".");
         } else {
-            System.out.println("Человек устал");
+            System.out.println("Робот сошел с дистанции");
             onTrack = false;
         }
         ;
@@ -26,9 +27,9 @@ public class People implements Skills {
     @Override
     public void jump(int wallHigh) {
         if (onTrack && jumpHigh >= wallHigh) {
-            System.out.println("Человек перепрыгнул стену, высотой - " + wallHigh + ".");
+            System.out.println("Робот перепрыгнул стену высотой - " + wallHigh + ".");
         } else {
-            System.out.println("Человек не допрыгнул");
+            System.out.println("Робот сошел с дистанции");
             onTrack = false;
         }
         ;
@@ -48,4 +49,5 @@ public class People implements Skills {
     public void presentation() {
         System.out.println(name + " бег: " + runDistance + ", прыжки: " + jumpHigh +".");
     }
+
 }

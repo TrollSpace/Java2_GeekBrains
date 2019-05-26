@@ -1,3 +1,5 @@
+package lesson1;
+
 public class Wall extends ObstacleCourse {
     private int high;
 
