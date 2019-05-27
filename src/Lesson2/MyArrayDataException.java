@@ -1,8 +1,25 @@
 package Lesson2;
 
 public class MyArrayDataException extends RuntimeException {
-    public int i;
-    public int j;
+    private int i;
+
+    public int getI() {
+        return i;
+    }
+
+    public void setI(int i) {
+        this.i = i;
+    }
+
+    public int getJ() {
+        return j;
+    }
+
+    public void setJ(int j) {
+        this.j = j;
+    }
+
+    private int j;
 
     public MyArrayDataException(int i, int j){
         this.i = i;

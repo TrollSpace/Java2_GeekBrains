@@ -3,14 +3,14 @@ package Lesson2;
 public class Main {
     public static void main(String[] args) {
         int result = 0;
-        String[][] x = {{"1", "1", "1", "g"}, {"2", "2", "2", "2"}, {"3", "3", "3", "3"}, {"4", "4", "4", "4"}};
+        String[][] x = {{"1", "1", "1"}, {"2", "2", "2", "2"}, {"3", "3", "3", "3"}, {"4", "4", "4", "4"}};
         try {
             result = sumArray(x);
         } catch (MyArraySizeException e) {
             System.out.println("Invalid array size!");
             return;
         } catch (MyArrayDataException e) {
-            System.out.println("Error in: row-" + e.i + ", column-" + e.j + ". Unrecognized symbol: " + x[e.i][e.j]);
+            System.out.println("Error in: row-" + e.getI() + ", column-" + e.getJ() + ". Unrecognized symbol: " + x[e.getI()][e.getJ()]);
             return;
         }
         System.out.println(result);
