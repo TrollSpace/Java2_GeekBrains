@@ -7,7 +7,7 @@ public class Main {
         try {
             result = sumArray(x);
         } catch (MyArraySizeException e) {
-            System.out.println("Invalid array size!");
+            System.out.println(e.getMessage());
             return;
         } catch (MyArrayDataException e) {
             System.out.println("Error in: row-" + e.getI() + ", column-" + e.getJ() + ". Unrecognized symbol: " + x[e.getI()][e.getJ()]);
