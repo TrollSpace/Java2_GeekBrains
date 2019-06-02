@@ -1,10 +1,13 @@
-public class Cat implements Skills {
+package lesson1;
+
+public class People implements Skills {
     private String name;
     private int jumpHigh;
     private int runDistance;
     private boolean onTrack;
 
-    public Cat(String name, int jumpHigh, int runDistance) {
+
+    public People(String name, int jumpHigh, int runDistance) {
         this.name = name;
         this.jumpHigh = jumpHigh;
         this.runDistance = runDistance;
@@ -14,9 +17,9 @@ public class Cat implements Skills {
     @Override
     public void run(int trackLength) {
         if (onTrack && runDistance >= trackLength) {
-            System.out.println("Кошка пробежала " + trackLength + ".");
+            System.out.println("Человек пробежал " + trackLength + ".");
         } else {
-            System.out.println("Кошка ушла спать");
+            System.out.println("Человек устал");
             onTrack = false;
         }
         ;
@@ -25,9 +28,9 @@ public class Cat implements Skills {
     @Override
     public void jump(int wallHigh) {
         if (onTrack && jumpHigh >= wallHigh) {
-            System.out.println("Кошка перепрыгнула стену высотой - " + wallHigh + ".");
+            System.out.println("Человек перепрыгнул стену, высотой - " + wallHigh + ".");
         } else {
-            System.out.println("Кошка шмякнулась");
+            System.out.println("Человек не допрыгнул");
             onTrack = false;
         }
         ;
@@ -42,7 +45,6 @@ public class Cat implements Skills {
     public void result() {
         System.out.println(name + " " + (onTrack ? ("finish") : ("fail")));
     }
-
 
     @Override
     public void presentation() {
