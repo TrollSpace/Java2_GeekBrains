@@ -35,6 +35,7 @@ public class ChatWindow extends JFrame {
     private void sendMessage(JTextField textField, JTextArea jTextArea) {
         String out = textField.getText();
         jTextArea.append(out);
+        textField.setText("");
         textField.grabFocus();
     }
 
