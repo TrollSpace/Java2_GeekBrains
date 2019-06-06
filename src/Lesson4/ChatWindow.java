@@ -11,23 +11,23 @@ public class ChatWindow extends JFrame {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setBounds(400, 400, 600, 400);
         JTextArea jTextArea = new JTextArea();
-        JTextField textField = new JTextField();
+        JTextField jTextField = new JTextField();
         JButton jb = new JButton("SEND");
-        textField.addActionListener(new ActionListener() {
+        jTextField.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                sendMessage(textField, jTextArea);
+                sendMessage(jTextField, jTextArea);
             }
         });
         jb.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                sendMessage(textField, jTextArea);
+                sendMessage(jTextField, jTextArea);
             }
         });
         setLayout(new BorderLayout());
         add(jTextArea, BorderLayout.CENTER);
-        add(textField, BorderLayout.SOUTH);
+        add(jTextField, BorderLayout.SOUTH);
         add(jb, BorderLayout.EAST);
         setVisible(true);
     }
