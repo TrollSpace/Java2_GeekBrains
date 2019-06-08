@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Main {
 
     public static final int size = 10000000;
-    public static int threadCount = 2;
+    public static int threadCount = 2;  // Можно менять колличество потоков. Но четными, реализация со всеми вариантами будет в 2.0 =)))
     public static final int h = size / threadCount;
     public static float[] arrMain = new float[size];
 
