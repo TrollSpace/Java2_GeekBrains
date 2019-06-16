@@ -1,11 +1,8 @@
 package Lesson6.Server;
 
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.net.ServerSocket;
-import java.net.Socket;
+import java.io.*;
+import java.net.*;
 import java.util.Scanner;
 
 public class ChatServer {
@@ -22,13 +19,11 @@ public class ChatServer {
             DataOutputStream out = new DataOutputStream(socket.getOutputStream());
             Scanner sc = new Scanner(System.in);
             new Thread(() -> {
-                while (true) {
-                    try {
-                        String msg = sc.nextLine();
-                        out.writeUTF(msg);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+                while (true) try {
+                    String msg = sc.nextLine();
+                    out.writeUTF(msg);
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
             }).start();
 
