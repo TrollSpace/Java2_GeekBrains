@@ -21,7 +21,6 @@ public class ChatServer {
             DataInputStream in = new DataInputStream(socket.getInputStream());
             DataOutputStream out = new DataOutputStream(socket.getOutputStream());
             Scanner sc = new Scanner(System.in);
-
             new Thread(() -> {
                 while (true) {
                     try {
@@ -33,9 +32,9 @@ public class ChatServer {
                 }
             }).start();
 
-            while(true){
+            while (true) {
                 String msg = in.readUTF();
-                System.out.println(msg);
+                System.out.println("Client: " + msg);
             }
         } catch (IOException e) {
             e.printStackTrace();
