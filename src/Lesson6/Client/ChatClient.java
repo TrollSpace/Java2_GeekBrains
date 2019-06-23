@@ -25,7 +25,7 @@ public class ChatClient {
 
             while (true) {
                 String msg = in.readUTF();
-                System.out.println("Server: " + msg);
+                System.out.println("server: " + msg);
             }
         } catch (IOException e) {
             e.printStackTrace();

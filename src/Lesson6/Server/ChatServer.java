@@ -12,9 +12,9 @@ public class ChatServer {
     public ChatServer() {
         try {
             serversocket = new ServerSocket(5000);
-            System.out.println("Server wait connection");
+            System.out.println("server wait connection");
             socket = serversocket.accept();
-            System.out.println("Client connected with IP: " + socket.getInetAddress().getHostAddress());
+            System.out.println("client connected with IP: " + socket.getInetAddress().getHostAddress());
             DataInputStream in = new DataInputStream(socket.getInputStream());
             DataOutputStream out = new DataOutputStream(socket.getOutputStream());
             Scanner sc = new Scanner(System.in);
@@ -29,7 +29,7 @@ public class ChatServer {
 
             while (true) {
                 String msg = in.readUTF();
-                System.out.println("Client: " + msg);
+                System.out.println("client: " + msg);
             }
         } catch (IOException e) {
             e.printStackTrace();
